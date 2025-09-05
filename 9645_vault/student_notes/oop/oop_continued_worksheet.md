@@ -144,12 +144,33 @@ Create a new class named `InternationalStudent` that inherits from your `Student
 
 **A:**
 ``` python
-class student():
-class International_student(Student):
+class Student():
+	def __init__(self, DOB , Class):
+		self.DOB = "1/1/2020"
+		self.Class = Class
+		
+class InternationalStudent(Student):
 	def __init__(self, fee_paid, nationality, grade_expected_by_parent):
 		self._fee_paid = fee_paid
 		self.__nationality = nationality
 		self.__grade_expected_by_parent = grade_expected_by_parent
+	def get_fee_paid(self):
+		return self._fee_paid
+		
+	def get_nationality(self):
+		return self.__nationality
+		
+	def get_grade_expected_by_parents(self):
+		return self.__grade_expected_by_parent
+		
+	def set_fee_paid(self, fee_paid):
+		self._fee_paid = fee_paid
+	def set_nationality(self, nationality):
+		self.__nationality = nationality
+	def set_grade_expected_by_parent(self, grade_expected_by_parent):
+		self.__grade_expected_by_parent = grade_expected_by_parent
+a = InternationalStudent(0,"chiense","abc")
+print(a._fee_paid)
 ```
 
 ---
@@ -173,7 +194,35 @@ Instantiate three `InternationalStudent` objects and set their default propertie
 ---
 
 **A:**
-
+```python
+class Student():
+	def __init__(self, DOB , Class):
+		self.DOB = "1/1/2020"
+		self.Class = Class
+		
+class InternationalStudent(Student):
+	def __init__(self, fee_paid, nationality, grade_expected_by_parent):
+		self._fee_paid = fee_paid
+		self.__nationality = nationality
+		self.__grade_expected_by_parent = grade_expected_by_parent
+	def get_fee_paid(self):
+		return self._fee_paid
+		
+	def get_nationality(self):
+		return self.__nationality
+		
+	def get_grade_expected_by_parents(self):
+		return self.__grade_expected_by_parent
+		
+	def set_fee_paid(self, fee_paid):
+		self._fee_paid = fee_paid
+	def set_nationality(self, nationality):
+		self.__nationality = nationality
+	def set_grade_expected_by_parent(self, grade_expected_by_parent):
+		self.__grade_expected_by_parent = grade_expected_by_parent
+a = InternationalStudent(0,"chiense","abc")
+print(a._fee_paid)
+```
 ---
 
 *To save, share and backup your work:*
