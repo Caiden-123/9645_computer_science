@@ -183,7 +183,16 @@ Create an instance of a `Student` - using yourself as an example.
 **A:**
 
 ``` python
-print("dsdas")
+class Student:
+	def __init__(self, DOB , Class):
+		self.DOB = "1/1/2020"
+		self.Class = Class
+
+Yourself = Student("5/10/09","12CS")
+print(Yourself.Class, Yourself.DOB)
+```
+
+
 ```
 
 
@@ -265,7 +274,34 @@ Create getter methods so that every property contained within a given student ca
 ---
 
 **A:**
+ ```python
+ 
+class Student:
+	def __init__(self, fav_subject : str , no_of_eca : int, grades, gpa : float):
+			self.__fav_subject = ""
+			self.__no_of_eca = 0
+			self.__grades = []
+			self.__gpa = 0.0
+	def set_favourite(self, subject :str):
+		self.__subject = subject
+		if len(subject) > 3: 
+			self.__fav_subject = subject
+	def add_eca(self):	
+		self.__no_of_eca += 1		
+	def add_grade(self, grade : str):
+		self.__grades.append(grade)
+	def get_favourite(self) -> str:
+		return self.__fav_subject
+	def get_no_of_ecas(self) -> int:
+		return self.__no_of_eca
+	def get_grades(self) -> list:
+		return self.__grades
+		
 
+
+
+```
+ ```
 ---
 
 *To save, share and back up your work:*
@@ -297,6 +333,47 @@ The GPA can be calculated by finding the point score for each grade the student 
 ---
 
 **A:**
+
+```python
+ 
+class Student:
+	def __init__(self, fav_subject : str , no_of_eca : int, grades, gpa : float):
+			self.__fav_subject = ""
+			self.__no_of_eca = 0
+			self.__grades = []
+			self.__gpa = 0.0
+	def set_favourite(self, subject :str):
+		self.__subject = subject
+		if len(subject) > 3: 
+			self.__fav_subject = subject
+	def calculate_gpa(self):
+		Trans = [["A*",4],["A",3.2],["B",2.6],["C",1.8],["D",1.0],["E",0.2],["U",0.0]]
+		count = 0
+		for i in Trans:
+			for x in grades:
+				if i[0] == x:
+					count += i[1]
+		
+		count = count/4
+		self.__gpa = count
+		
+					
+	def add_eca(self):	
+		self.__no_of_eca += 1		
+	def add_grade(self, grade : str):
+		self.__grades.append(grade)
+	def get_favourite(self) -> str:
+		return self.__fav_subject
+	def get_no_of_ecas(self) -> int:
+		return self.__no_of_eca
+	def get_grades(self) -> list:
+		return self.__grades
+
+
+
+		
+
+```
 
 ---
 
@@ -334,7 +411,42 @@ Implement getters / setters for the new properties as required.
 ---
 
 **A:**
+ ``` python
 
+class Student:
+	def __init__(self, fav_subject : str , no_of_eca : int, grades, gpa : float):
+			self.__fav_subject = ""
+			self.__no_of_eca = 0
+			self.__grades = []
+			self.__gpa = 0.0
+	def set_favourite(self, subject :str):
+		self.__subject = subject
+		if len(subject) > 3: 
+			self.__fav_subject = subject
+	def calculate_gpa(self):
+		Trans = [["A*",4],["A",3.2],["B",2.6],["C",1.8],["D",1.0],["E",0.2],["U",0.0]]
+		count = 0
+		for i in Trans:
+			for x in grades:
+				if i[0] == x:
+					count += i[1]
+		
+		count = count/4
+		self.__gpa = count
+		
+					
+	def add_eca(self):	
+		self.__no_of_eca += 1		
+	def add_grade(self, grade : str):
+		self.__grades.append(grade)
+	def get_favourite(self) -> str:
+		return self.__fav_subject
+	def get_no_of_ecas(self) -> int:
+		return self.__no_of_eca
+	def get_grades(self) -> list:
+		return self.__grades
+```
+ ```
 ---
 
 *To save, share and backup your work:*

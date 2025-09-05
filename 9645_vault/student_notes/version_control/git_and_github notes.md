@@ -18,7 +18,6 @@ git push
 
 ```
 
-## Git hub
 ### How to Stage, Commit and push from Git plugin on Obsidian
 
 - To stage, press the plus button at the top of the panel to `"stage all"`
@@ -26,4 +25,5 @@ git push
 - Change the commit message (The text input at the top) to something useful and easy to recognise. !!!
 - To push, press the upward arrow button
 - To do commit and sync in one step, press the arrow inside the circle
--
+
+## Git hub 
